@@ -55,6 +55,10 @@ let baseWebpackConfig = {
   module: {
     rules: [
       {
+        test: /\.styl$/,
+        loaders: ['style-loader', 'css-loader', 'stylus-loader']
+      },
+      {
         test: /\.(js|vue)$/,
         loader: 'eslint-loader',
         enforce: 'pre',

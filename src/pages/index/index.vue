@@ -12,17 +12,15 @@
 
     <div class="usermotto">
       <div class="user-motto">
-        <card :text="motto"></card>
+        <card :text="msg"></card>
       </div>
     </div>
 
-    <form class="form-container">
-      <input type="text" class="form-control" :value="motto" placeholder="v-model" />
-      <input type="text" class="form-control" v-model="motto" placeholder="v-model" />
-      <input type="text" class="form-control" v-model.lazy="motto" placeholder="v-model.lazy" />
-    </form>
+    <input type="text" class="form-control" :value="msg"/>
 
     <a href="/pages/counter/main" class="counter">去往Vuex示例页面</a>
+    <hr>
+    <a href="/pages/commodity/main" class="commodity">去往commodity页面</a>
 
     <div class="all">
         <div class="left">
@@ -39,7 +37,7 @@ import card from '@/components/card'
 export default {
   data () {
     return {
-      motto: 'Hello miniprograme',
+      msg: 'test',
       userInfo: {
         nickName: 'mpvue',
         avatarUrl: 'http://mpvue.com/assets/logo.png'
@@ -62,7 +60,6 @@ export default {
     },
     clickHandle (ev) {
       console.log('clickHandle:', ev)
-      // throw {message: 'custom test'}
     }
   },
 
@@ -72,55 +69,45 @@ export default {
 }
 </script>
 
-<style scoped>
-.userinfo {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-}
+<style scoped lang="stylus">
+  @import '../../common/variables.styl';
 
-.userinfo-avatar {
-  width: 128rpx;
-  height: 128rpx;
-  margin: 20rpx;
-  border-radius: 50%;
-}
+  .userinfo
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  .userinfo-avatar
+    width: 128rpx;
+    height: 128rpx;
+    margin: 20rpx;
+    border-radius: 50%;
+  .userinfo-nickname
+    color: #aaa;
+  .usermotto
+    margin-top: 150px;
 
-.userinfo-nickname {
-  color: #aaa;
-}
+  .form-control
+    display: block;
+    padding: 0 12px;
+    margin-bottom: 5px;
+    border: 1px solid #ccc;
+  .all
+    width:7.5rem;
+    height:1rem;
+    background-color:blue;
+  .all:after
+    display:block;
+    content:'';
+    clear:both;
+  .left
+    float:left;
+    width:3rem;
+    height:1rem;
+    background-color:red;
 
-.usermotto {
-  margin-top: 150px;
-}
-
-.form-control {
-  display: block;
-  padding: 0 12px;
-  margin-bottom: 5px;
-  border: 1px solid #ccc;
-}
-.all{
-  width:7.5rem;
-  height:1rem;
-  background-color:blue;
-}
-.all:after{
-  display:block;
-  content:'';
-  clear:both;
-}
-.left{
-  float:left;
-  width:3rem;
-  height:1rem;
-  background-color:red;
-}
-
-.right{
-  float:left;
-  width:4.5rem;
-  height:1rem;
-  background-color:green;
-}
+  .right
+    float:left;
+    width:4.5rem;
+    height:1rem;
+    background-color: $footColor;
 </style>
