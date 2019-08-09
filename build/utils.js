@@ -65,7 +65,7 @@ exports.cssLoaders = function (options) {
 
 
   const stylusOptions = {
-    import: [path.join(__dirname, "../src/stylus/variables.styl")],  //你公共样式存放的位置
+    import: [path.join(__dirname, "../src/stylus/variables.scss")],  //你公共样式存放的位置
     paths: [path.join(__dirname, '../src/stylus'), path.join(__dirname, '../')]  //公共样式文件位置
   }
   return {

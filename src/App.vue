@@ -30,8 +30,8 @@ export default {
 }
 </script>
 
-<style lang="stylus">
-@import "../src/common/variables.styl";
+<style lang="scss">
+@import "common/variables";
   .container {
     height: 100%;
     display: flex;

@@ -10,9 +10,6 @@ export default {
 }
 </script>
 
-<style scoped lang="stylus">
-  @import '../../common/variables.styl';
-
-  p
-    color: $messageBackgroundColor
+<style scoped lang='scss'>
+  @import "./style";
 </style>

@@ -53,7 +53,13 @@ module.exports = {
     'no-underscore-dangle': 0,
     'no-alert': 0,
     'no-nested-ternary': 0,
-    "quotes": [1, "single"]
+    "quotes": [0, "single"],
+    'semi': 0,
+    "no-irregular-whitespace":"off", // 这禁止掉 空格报错检查
+    "no-sequences": 0, // 禁用逗号关闭
+    "no-unused-vars": 0, // 定义变量可以不使用
+    "space-before-function-paren": 0, // 方法名后面可以不加空格
+    "spaced-comment": 0 // 注释的//后面可以不加空格
   },
   globals: {
     App: true,
